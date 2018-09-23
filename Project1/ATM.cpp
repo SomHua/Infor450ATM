@@ -1,6 +1,8 @@
-
 #include <iostream>
+
 #include <string>
+
+// This enables us to not have to write std repeatedly everytime we use the cout function 
 using namespace std;
 
 int main()
@@ -20,20 +22,15 @@ int main()
 		if (withdrawAmount > 300)
 		{
 			cout << "Sorry, the the maximum amount you can withdraw is $300" << endl;
-
 		}
-
 		// Check if the minimum is at least 1 
-
 		if (withdrawAmount <= 0)
 		{
 			cout << "Sorry, the the minimum amount you can withdraw is $1" << endl;
-
 		}
 		// If the user enters the number between 1 and 300 the If statement will execute 
 
 		if (withdrawAmount > 0 && withdrawAmount < 301)
-
 		{
 			// This conditions check if the amount is at least $50
 			if (withdrawAmount >= 50)
@@ -46,14 +43,10 @@ int main()
 				// get the remainer after deviding it by $50 
 				withdrawAmount %= 50;
 			}
-
 			/* The next 4 If statements are checking for the same condition,
-
 			 * it will check whether the withdrawAmount can be divisble by
 			 * 20, 10, 5
-
 			*/
-
 			if (withdrawAmount >= 20)
 			{
 				twentyBill = withdrawAmount / 20;
@@ -65,17 +58,11 @@ int main()
 				tenBill = withdrawAmount / 10;
 				cout << "you have " << tenBill << " $10 bills" << endl;
 				withdrawAmount %= 10;
-
 			}
-
 			if (withdrawAmount >= 5)
-
 			{
-
 				fiveBill = withdrawAmount / 5;
-
 				cout << "you have " << fiveBill << " $5 bills" << endl;
-
 				withdrawAmount %= 5;
 			}
 			if (withdrawAmount >= 1)
@@ -92,14 +79,12 @@ int main()
 				cout << "Would you like another transaction? Press Y for yes:  " << endl;
 				cin >> newTransaction;
 			}
-
 			// If none of the condition matches, then the program should display this message
 			else
 			{
 				cout << "We can't seem to figure out the problem " << endl;
 			}
 		}
-
 	}
 	// If the user press Y then the program will running again at the start of the Do..While loop
 
